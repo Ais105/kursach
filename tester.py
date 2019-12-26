@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 if __name__ == '__main__':
     # user = input("Enter username: \n")
     # password = input("Enter password: \n")
-    g = Github("Ais105","m123j54der")
+    g = Github(user,password)
     user = g.get_user()
     #
     repositories = [repo.name for repo in g.get_user().get_repos()]
