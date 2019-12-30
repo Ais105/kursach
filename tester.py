@@ -51,13 +51,15 @@ if __name__ == '__main__':
     ])
     fig.update_layout(width=400, height=500)
     fig.show()
-    
+
+    r_name = input("Get repo for tags: \n")
+    print("Get all tags in repo %s:" % r_name)
     tags = g.get_user().get_repo(repository_name).get_tags()
     tags_id_list = []
     for tag in tags:
         tags_id_list.append(tag.name)
     fig = go.Figure(data=[go.Table(
-            header=dict(values=[repository_name],
+            header=dict(values=[r_name],
                         line_color='white',
                         fill_color='rgb(206, 153, 255)',
                         align='center'),
@@ -72,13 +74,13 @@ if __name__ == '__main__':
     # commits_files
     print("Get all commits in repository %s:" % repository_name)
     rep_name = input("Get repo for commits: \n")
-    print(g.get_user().get_repo(rep_name).get_commits().totalCount)
+    print("count of commits: ",g.get_user().get_repo(rep_name).get_commits().totalCount)
     commits = g.get_user().get_repo(rep_name).get_commits()
     files_in_commits = {commit.sha: [file.filename for file in commit.files] for commit in commits}
     commits_name = list(files_in_commits.keys())
     last = commits[0]
     commit_list = [file.filename for file in last.files]
-    print(commit_list)
+    print("last change: ",commit_list)
 
     fig = go.Figure(data=[go.Table(
         header=dict(values=commits_name,
@@ -135,6 +137,3 @@ if __name__ == '__main__':
     ])
     fig.update_layout(width=500, height=130000)
     fig.show()'''
-
-    # print("<--------------------------------------------------->")
-    #количество багов для измененных файлов
