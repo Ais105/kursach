@@ -22,5 +22,5 @@ $ pip install PyGithub
 $ pip install plotly
 $ pip install gitpython
 ```
-! [] (Untitled-Project-‐-Made-with-Clipchamp.gif)
+! [] (Untitled-Project-‐-Made-with-Clipchamp-giphy.gif)
 
