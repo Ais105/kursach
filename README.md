@@ -13,4 +13,14 @@
 
 ## Инструкция по запуску
 
+Обязательным условием работы скриптов является наличие пакетного менеджера Pip.
+
+Для установки всех необходимых пакетов используются команды:
+
+```ShellSession
+$ pip install PyGithub
+$ pip install plotly
+$ pip install gitpython
+```
+! [] (Untitled-Project-‐-Made-with-Clipchamp-giphy.gif)
 
